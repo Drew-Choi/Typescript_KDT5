@@ -10,7 +10,6 @@ interface Result {
 
 type nameT = string;
 
-
 const array: Individual[] = [
   { name: "kim", age: 17, height: 182 },
   { name: "lee", age: 39, height: 172 },
@@ -21,12 +20,10 @@ const array: Individual[] = [
   { name: "cho", age: 28, height: 167 },
   ];
 
-
-
 const result: Result = (arr) => {
   let resultArr: nameT[] = [];
 
-  arr.map((el, index)=> {
+  arr.map((el: Individual)=> {
     if (el.age >= 25 && el.height >= 175) {
       resultArr.push(el.name)
     }
